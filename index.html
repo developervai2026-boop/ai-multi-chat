@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাল্টি এজেন্ট এআই চ্যাটবট</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 মাল্টি এজেন্ট এআই চ্যাটবট</h1>
+            <p>এক জায়গা থেকে বিভিন্ন এআই মডেলের সাথে কথা বলুন ও নিখুঁত প্রম্পট তৈরি করুন</p>
+        </header>
+
+        <div class="main-content">
+            <!-- বাম পাশের অংশ: বেছে নেওয়ার ব্যবস্থা -->
+            <div class="sidebar">
+                <div class="card">
+                    <h3>📌 এআই মডেল বেছে নিন</h3>
+                    <div class="model-list">
+                        <label class="model-item">
+                            <input type="checkbox" name="model" value="gemini" checked>
+                            গুগল জেমিনি
+                        </label>
+                        <label class="model-item">
+                            <input type="checkbox" name="model" value="mistral">
+                            মিস্ট্রাল এআই
+                        </label>
+                        <label class="model-item">
+                            <input type="checkbox" name="model" value="llama">
+                            লামা ৩
+                        </label>
+                        <label class="model-item">
+                            <input type="checkbox" name="model" value="gpt">
+                            জিপিটি-৩.৫ টার্বো
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>✨ প্রম্পট তৈরি করুন</h3>
+                    <select id="promptType" class="input-field">
+                        <option value="">প্রম্পটের ধরণ বেছে নিন</option>
+                        <option value="general">সাধারণ প্রশ্ন</option>
+                        <option value="study">পড়াশোনা সম্পর্কিত</option>
+                        <option value="writing">লেখালেখি ও সৃজনশীল কাজ</option>
+                        <option value="technical">প্রযুক্তি ও প্রোগ্রামিং</option>
+                        <option value="business">ব্যবসা ও পরিকল্পনা</option>
+                    </select>
+                    <button id="generatePromptBtn" class="btn btn-secondary">স্বয়ংক্রিয় প্রম্পট তৈরি করুন</button>
+                </div>
+            </div>
+
+            <!-- ডান পাশের অংশ: চ্যাট ও উত্তর দেখানো -->
+            <div class="chat-section">
+                <div class="chat-box" id="chatBox">
+                    <div class="welcome-message">
+                        <h3>স্বাগতম! 👋</h3>
+                        <p>উপরের অংশ থেকে পছন্দের এআই মডেল বেছে নিন, তারপর নিচের ঘরে আপনার প্রশ্ন বা বার্তা লিখুন। চাইলে স্বয়ংক্রিয়ভাবে ভালো মানের প্রম্পটও তৈরি করে নিতে পারেন।</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="userInput" placeholder="এখানে আপনার প্রশ্ন বা বার্তা লিখুন..."></textarea>
+                    <button id="sendBtn" class="btn btn-primary">পাঠান</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
